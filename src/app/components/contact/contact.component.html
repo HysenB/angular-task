@@ -6,7 +6,7 @@
 <h3 *ngIf="contact"><strong>{{contact.first_name}} {{contact.last_name}}</strong></h3>
 </div>
 
-<form  *ngFor="let address of addresses; let i = index" class="example-form">
+<form *ngFor="let address of addresses; let i = index" class="example-form">
   <!-- <pre>{{address | json }}</pre> -->
   <h3>Address #{{i + 1}}</h3>
   <mat-form-field class="example-full-width">
@@ -79,7 +79,7 @@
   </button>
   <button (click)="submit()" class="save">
     <mat-icon>save</mat-icon>
-    <a>Save</a>
+    <a routerLink="/contacts/">Save</a>
   </button>
 
 
