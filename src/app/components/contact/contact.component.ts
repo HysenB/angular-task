@@ -76,6 +76,8 @@ export class ContactComponent implements OnInit {
       })
     });
 
+    window.location.reload();
+
   }
 
   ngOnInit(): void {

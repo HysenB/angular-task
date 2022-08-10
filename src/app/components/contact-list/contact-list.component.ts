@@ -44,6 +44,7 @@ export class ContactListComponent implements OnInit {
     this.contactService.createContact(this.contact).subscribe(data => {
       this.router.navigateByUrl('/contacts');
     });
+    window.location.reload();
     console.log('asd');
   }
 

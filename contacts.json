@@ -32,6 +32,21 @@
       "first_name": "asd",
       "id": 6,
       "last_name": "asd"
+    },
+    {
+      "first_name": "example2",
+      "id": 7,
+      "last_name": "example2"
+    },
+    {
+      "first_name": "example3",
+      "id": 8,
+      "last_name": "example3"
+    },
+    {
+      "first_name": "example4",
+      "id": 9,
+      "last_name": "example4"
     }
   ],
   "addresses": [
@@ -106,6 +121,22 @@
       "street2": "qwe",
       "town": "qwe",
       "country": "ES"
+    },
+    {
+      "id": 10,
+      "contactId": "7",
+      "street1": "qwe",
+      "street2": "qweqwe",
+      "town": "qweqew",
+      "country": "CH"
+    },
+    {
+      "id": 11,
+      "contactId": "4",
+      "street1": "asdasd",
+      "street2": "asdads",
+      "town": "asdasd",
+      "country": "CH"
     }
   ],
   "countries": [
