@@ -18,10 +18,13 @@ img {
   padding-left: 1rem;
 }
 
+
+
 button {
   margin: 2rem 2rem 0 0 ;
   padding: 0.2rem 0.6rem;
   flex-direction: row;
+
   justify-content: space-around;
   align-items: center;
   width: 150px;
@@ -29,6 +32,20 @@ button {
   background-color: whitesmoke;
   cursor: pointer;
 }
+
+button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button div a {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+
+
+
 
 form {
   margin-top: 1rem;

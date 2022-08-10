@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
     this.countryService.getAllCountries().subscribe(country => this.countries = country);
   }
 
-  changeFormAppearance(): void {
+  addForm(): void {
     this.showForm = true;
   }
 

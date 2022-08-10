@@ -3,7 +3,7 @@
 
 <div class="profile">
   <img [src]="contact.avatar" alt="">
-<h3 *ngIf="contact"><strong>{{contact.first_name}} {{contact.last_name}}</strong></h3>
+  <h3 *ngIf="contact"><strong>{{contact.first_name}} {{contact.last_name}}</strong></h3>
 </div>
 
 <form *ngFor="let address of addresses; let i = index" class="example-form">
@@ -29,7 +29,7 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Country</mat-label>
-    <select  [(ngModel)]="address.country" name="country" matNativeControl required>
+    <select [(ngModel)]="address.country" name="country" matNativeControl required>
 
       <option [ngValue]="country.iso2" *ngFor="let country of countries">
         {{country.name}}
@@ -73,28 +73,35 @@
 <!-- <input type="submit"> -->
 
 
-  <button (click)="changeFormAppearance()" class="add">
-    <mat-icon>add</mat-icon>
-    <a>Add Address</a>
+<div class="btnn">
+  <button (click)="addForm()" class="add">
+    <div>
+      <mat-icon>add</mat-icon>
+      <a>Add</a>
+    </div>
   </button>
   <button (click)="submit()" class="save">
-    <mat-icon>save</mat-icon>
-    <a routerLink="/contacts/">Save</a>
+    <div>
+
+      <mat-icon>save</mat-icon>
+      <a>Save</a>
+    </div>
+    <!-- <a routerLink="/contacts/">Save</a> -->
   </button>
 
 
-<!-- <input type="button" value="Add Address"> -->
+  <!-- <input type="button" value="Add Address"> -->
 
 
 
 
-<!-- <a >Save</a> -->
-<!-- <pre>{{vAddress | json }}</pre> -->
-<!-- <pre>{{newForm.value| json }}</pre> -->
+  <!-- <a >Save</a> -->
+  <!-- <pre>{{vAddress | json }}</pre> -->
+  <!-- <pre>{{newForm.value| json }}</pre> -->
 
 
-<!-- <input  value="Add Address"> -->
+  <!-- <input  value="Add Address"> -->
 
-<!-- <div *ngFor="let address of addresses">
+  <!-- <div *ngFor="let address of addresses">
   <p *ngIf="address.street1">{{address.street1}}</p>
 </div> -->
