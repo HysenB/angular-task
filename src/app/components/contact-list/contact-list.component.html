@@ -1,1 +1,26 @@
-<p>contact-list works!</p>
+<div class="container">
+  <div *ngFor="let contact of contacts" class="contacts">
+
+      <img [src]="contact.avatar">
+
+      <mat-icon *ngIf="!contact.avatar">person</mat-icon>
+      <a routerLink="/contacts/{{contact.id}}">
+        {{contact.first_name}} {{contact.last_name}}
+      </a>
+
+  </div>
+
+  <form class="example-form" (submit)="createSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>New Contact</mat-label>
+      <input matInput placeholder="Enter Name" [(ngModel)]="name" name="name">
+    </mat-form-field>
+
+    <!-- <input type="submit" value="Create"> -->
+    <button class="button" type="submit">
+      <mat-icon type="submit">add_circle</mat-icon>
+    </button>
+
+  </form>
+
+</div>

@@ -1,1 +1,22 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+    </button>
+    <h1>Angular Task</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav>
+      <mat-nav-list>
+        <a routerLink="/" mat-list-item>Home</a>
+        <a routerLink="/contacts" mat-list-item>Contacts</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

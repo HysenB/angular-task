@@ -1,1 +1,100 @@
-<p>contact works!</p>
+<!-- <pre>{{newForm.value | json }} </pre> -->
+
+
+<div class="profile">
+  <img [src]="contact.avatar" alt="">
+<h3 *ngIf="contact"><strong>{{contact.first_name}} {{contact.last_name}}</strong></h3>
+</div>
+
+<form  *ngFor="let address of addresses; let i = index" class="example-form">
+  <!-- <pre>{{address | json }}</pre> -->
+  <h3>Address #{{i + 1}}</h3>
+  <mat-form-field class="example-full-width">
+    <mat-label>Street 1</mat-label>
+    <input type="text" required [value]="address.street1" [(ngModel)]="address.street1" name="street1" matInput
+      placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Street 2</mat-label>
+    <input type="text" required [value]="address.street2" [(ngModel)]="address.street2" name="street2" matInput
+      placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Town</mat-label>
+    <input type="text" required [value]="address.town" [(ngModel)]="address.town" name="town" matInput
+      placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Country</mat-label>
+    <select  [(ngModel)]="address.country" name="country" matNativeControl required>
+
+      <option [ngValue]="country.iso2" *ngFor="let country of countries">
+        {{country.name}}
+      </option>
+
+
+    </select>
+  </mat-form-field>
+</form>
+
+
+
+<form [formGroup]="newForm" *ngIf="showForm" class="example-form">
+  <!-- <h3>Address #{{addresses.length+1}}</h3> -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Street 1</mat-label>
+    <input type="text" formControlName="street1" required name="street1" matInput placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Street 2</mat-label>
+    <input type="text" formControlName="street2" required name="street2" matInput placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Town</mat-label>
+    <input type="text" formControlName="town" required name="town" matInput placeholder="Enter Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Country</mat-label>
+    <select formControlName="country" name="country" matNativeControl required>
+      <option disabled>Select option</option>
+      <option [ngValue]="country.iso2" *ngFor="let country of countries">
+        {{country.name}}
+      </option>
+    </select>
+  </mat-form-field>
+</form>
+
+<!-- <input type="submit"> -->
+
+
+  <button (click)="changeFormAppearance()" class="add">
+    <mat-icon>add</mat-icon>
+    <a>Add Address</a>
+  </button>
+  <button (click)="submit()" class="save">
+    <mat-icon>save</mat-icon>
+    <a>Save</a>
+  </button>
+
+
+<!-- <input type="button" value="Add Address"> -->
+
+
+
+
+<!-- <a >Save</a> -->
+<!-- <pre>{{vAddress | json }}</pre> -->
+<!-- <pre>{{newForm.value| json }}</pre> -->
+
+
+<!-- <input  value="Add Address"> -->
+
+<!-- <div *ngFor="let address of addresses">
+  <p *ngIf="address.street1">{{address.street1}}</p>
+</div> -->

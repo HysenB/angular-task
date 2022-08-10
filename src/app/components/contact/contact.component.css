@@ -1,0 +1,40 @@
+mat-form-field {
+  display: block;
+  width: 200px;
+}
+
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile h3 {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+button {
+  margin: 2rem 2rem 0 0 ;
+  padding: 0.2rem 0.6rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+form h3 {
+  font-weight: bold;
+  padding-top: 2rem;
+}

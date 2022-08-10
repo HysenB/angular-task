@@ -1,0 +1,19 @@
+img {
+  width: 25px;
+  border-radius: 50%;
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contacts a {
+  padding-left: 1rem;
+}
+
+.button {
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
