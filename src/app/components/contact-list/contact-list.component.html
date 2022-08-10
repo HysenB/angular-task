@@ -1,9 +1,12 @@
 <div class="container">
   <div *ngFor="let contact of contacts" class="contacts">
 
-      <img [src]="contact.avatar">
+      <img *ngIf="contact.avatar; else other" [src]="contact.avatar">
+
+      <ng-template #other>
 
       <mat-icon *ngIf="!contact.avatar">person</mat-icon>
+      </ng-template>
       <a routerLink="/contacts/{{contact.id}}">
         {{contact.first_name}} {{contact.last_name}}
       </a>
