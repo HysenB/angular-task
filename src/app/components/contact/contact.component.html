@@ -2,7 +2,7 @@
 
 
 <div class="profile">
-  <img [src]="contact.avatar" alt="">
+  <img *ngIf="contact && contact.avatar" [src]="contact.avatar" alt="">
   <h3 *ngIf="contact"><strong>{{contact.first_name}} {{contact.last_name}}</strong></h3>
 </div>
 

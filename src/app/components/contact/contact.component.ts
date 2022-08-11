@@ -33,13 +33,17 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private contactService: ContactService,
     private addressService: AddressService,
     private countryService: CountryService,
     private router: Router
   ) {
-    activatedRoute.params.subscribe((params) => {
+      this.getAllAC();
+    }
+
+  getAllAC(){
+    this.activatedRoute.params.subscribe((params) => {
       if(params['id']){
         this.contactService.getContact(params['id']).subscribe(contact => this.contact = contact);
         this.addressService.getAddress(params['id']).subscribe(address => this.addresses = address);
@@ -47,6 +51,7 @@ export class ContactComponent implements OnInit {
 
     })
     this.countryService.getAllCountries().subscribe(country => this.countries = country);
+
   }
 
   addForm(): void {
@@ -54,6 +59,7 @@ export class ContactComponent implements OnInit {
   }
 
   submit(): void {
+    this.getAllAC();
     if(this.addressId){
       this.vAddress.id = this.addressId.length + 1;
     }
@@ -74,9 +80,9 @@ export class ContactComponent implements OnInit {
       this.addressService.updateAddress(address, id).subscribe(() => {
         this.router.navigateByUrl(`/contacts/${address.contactId}`);
       })
-    });
-
+    })
     window.location.reload();
+
 
   }
 

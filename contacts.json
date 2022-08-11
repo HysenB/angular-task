@@ -19,66 +19,17 @@
       "avatar": "https://pbs.twimg.com/profile_images/630503477748195328/GWKlmRm-.jpg"
     },
     {
-      "first_name": "example",
-      "id": 4,
-      "last_name": "example"
-    },
-    {
-      "first_name": "qwe",
-      "id": 5,
-      "last_name": "qwe"
-    },
-    {
-      "first_name": "asd",
-      "id": 6,
-      "last_name": "asd"
-    },
-    {
-      "first_name": "example2",
-      "id": 7,
-      "last_name": "example2"
-    },
-    {
-      "first_name": "example3",
-      "id": 8,
-      "last_name": "example3"
-    },
-    {
-      "first_name": "example4",
-      "id": 9,
-      "last_name": "example4"
-    },
-    {
-      "first_name": "123",
-      "id": 10,
-      "last_name": "123"
-    },
-    {
-      "first_name": "1234",
-      "id": 11,
-      "last_name": "1234"
-    },
-    {
-      "first_name": "12345",
-      "id": 12,
-      "last_name": "123"
-    },
-    {
-      "first_name": "1111",
-      "id": 13,
-      "last_name": "1111"
-    },
-    {
-      "first_name": "asdsad",
-      "id": 14,
-      "last_name": "asdasd"
+      "avatar": "https://handmade.network/static/light/empty-avatar.svg",
+      "first_name": "John",
+      "last_name": "Doe",
+      "id": 4
     }
   ],
   "addresses": [
     {
       "street1": "Queen Anne's",
-      "street2": "Bloomsburyyy",
-      "town": "Londonnnn",
+      "street2": "Bloomsbury",
+      "town": "London",
       "country": "GB",
       "contactId": "2",
       "id": 1
@@ -86,85 +37,53 @@
     {
       "id": 2,
       "contactId": "2",
-      "street1": "1234",
-      "street2": "1234",
-      "town": "1234",
-      "country": "HU"
+      "street1": "s",
+      "street2": "s",
+      "town": "s",
+      "country": "AT"
     },
     {
       "id": 3,
-      "contactId": "1",
-      "street1": "asdddd",
-      "street2": "asd",
-      "town": "asd",
-      "country": "CZ"
+      "contactId": "2",
+      "street1": "d",
+      "street2": "d",
+      "town": "d",
+      "country": "AT"
     },
     {
       "id": 4,
-      "contactId": "2",
-      "street1": "123",
-      "street2": "123",
-      "town": "123",
-      "country": "HU"
+      "contactId": "3",
+      "street1": "aa",
+      "street2": "aaa",
+      "town": "aaa",
+      "country": "CH"
     },
     {
       "id": 5,
-      "contactId": "2",
-      "street1": "123",
-      "street2": "123",
-      "town": "123",
+      "contactId": "3",
+      "street1": "asd",
+      "street2": "asd",
+      "town": "asd",
       "country": "AT"
     },
     {
       "id": 6,
-      "contactId": "4",
-      "street1": "asdasd",
-      "street2": "asdasd",
-      "town": "asd",
-      "country": "BE"
+      "contactId": "3",
+      "street1": "ss",
+      "street2": "s",
+      "town": "s",
+      "country": "DE"
     },
     {
       "id": 7,
-      "contactId": "5",
-      "street1": "asd",
-      "street2": "asd",
-      "town": "asd",
-      "country": "NL"
+      "contactId": "3",
+      "street1": "s",
+      "street2": "s",
+      "town": "s",
+      "country": "CH"
     },
     {
       "id": 8,
-      "contactId": "3",
-      "street1": "123213213123",
-      "street2": "asd1231231",
-      "town": "asd12313",
-      "country": "CZ"
-    },
-    {
-      "id": 9,
-      "contactId": "6",
-      "street1": "qwe",
-      "street2": "qwe",
-      "town": "qwe",
-      "country": "ES"
-    },
-    {
-      "id": 10,
-      "contactId": "7",
-      "street1": "qwe",
-      "street2": "qweqwe",
-      "town": "qweqew",
-      "country": "CH"
-    },
-    {
-      "id": 11,
-      "contactId": "4",
-      "street1": "asdasd",
-      "street2": "asdads",
-      "town": "asdasd",
-      "country": "CH"
-    },
-    {
-      "id": 12,
       "contactId": "3",
       "street1": "asd",
       "street2": "asd",
@@ -172,44 +91,28 @@
       "country": "DE"
     },
     {
-      "id": 13,
+      "id": 9,
+      "contactId": "3",
+      "street1": "",
+      "street2": "s",
+      "town": "s",
+      "country": "NL"
+    },
+    {
+      "id": 10,
+      "contactId": "3",
+      "street1": "s",
+      "street2": "d",
+      "town": "d",
+      "country": "DE"
+    },
+    {
+      "id": 11,
       "contactId": "3",
       "street1": "asd",
       "street2": "asd",
       "town": "asd",
-      "country": "CH"
-    },
-    {
-      "id": 14,
-      "contactId": "4",
-      "street1": "asd",
-      "street2": "asd",
-      "town": "qwe",
       "country": "AT"
-    },
-    {
-      "id": 15,
-      "contactId": "2",
-      "street1": "aaaaaa",
-      "street2": "aaaa",
-      "town": "aaaa",
-      "country": "AT"
-    },
-    {
-      "id": 16,
-      "contactId": "11",
-      "street1": "asd",
-      "street2": "asdasd",
-      "town": "asdasd",
-      "country": "BE"
-    },
-    {
-      "id": 17,
-      "contactId": "13",
-      "street1": "qweqew",
-      "street2": "qweqwe",
-      "town": "qweqweq",
-      "country": "GB"
     }
   ],
   "countries": [

@@ -19,33 +19,37 @@ export class ContactListComponent implements OnInit {
     private contactService: ContactService,
     private router: Router,
   ) {
-    this.contactService.getAllContacts().subscribe((contact) => {
-      this.contacts = contact;
-    })
+    this.getContacts();
 
   }
 
 
 
-  createSubmit():void {
-    this.contactId = this.contacts.length;
-    console.log(this.name);
+  private getContacts() {
+    this.contactService.getAllContacts().subscribe((contact) => {
+      this.contacts = contact;
+    });
+  }
+
+  createSubmit() {
+    // this.contactId = this.contacts.length;
+    this.getContacts();
+    this.contact.id = this.contacts.length + 1;
     if(this.name){
       this.contact.first_name = this.name;
     }
-    this.contact.id = this.contactId + 1;
     this.contact.first_name = this.name.split(' ')[0];
     this.contact.last_name = this.name.split(' ')[1];
 
-    console.log(this.contact.id);
-    console.log(this.contact.first_name);
-    console.log(this.contact.last_name);
+    // console.log(this.contact.id);
+    // console.log(this.contact.first_name);
+    // console.log(this.contact.last_name);
 
     this.contactService.createContact(this.contact).subscribe(data => {
       this.router.navigateByUrl('/contacts');
+      // this.router.navigate(['/contacts']).then();
     });
-    window.location.reload();
-    console.log('asd');
+    this.getContacts();
   }
 
   ngOnInit(): void {
