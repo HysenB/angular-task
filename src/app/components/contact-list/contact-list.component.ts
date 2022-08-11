@@ -37,19 +37,21 @@ export class ContactListComponent implements OnInit {
     this.contact.id = this.contacts.length + 1;
     if(this.name){
       this.contact.first_name = this.name;
+      this.contact.first_name = this.name.trim().split(' ')[0];
+      this.contact.last_name = this.name.trim().substring(this.contact.first_name.length + 1);
     }
-    this.contact.first_name = this.name.split(' ')[0];
-    this.contact.last_name = this.name.split(' ')[1];
+
 
     // console.log(this.contact.id);
     // console.log(this.contact.first_name);
     // console.log(this.contact.last_name);
-
-    this.contactService.createContact(this.contact).subscribe(data => {
-      this.router.navigateByUrl('/contacts');
-      // this.router.navigate(['/contacts']).then();
-    });
-    this.getContacts();
+    if(this.name && this.name.trim().length >= 1){
+      this.contactService.createContact(this.contact).subscribe(data => {
+        this.router.navigateByUrl('/contacts');
+        // this.router.navigate(['/contacts']).then();
+      });
+      this.getContacts();
+    }
   }
 
   ngOnInit(): void {

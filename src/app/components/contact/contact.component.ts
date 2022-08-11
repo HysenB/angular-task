@@ -2,7 +2,7 @@
 import { CountryService } from './../../services/country.service';
 import { ContactService } from './../../services/contact.service';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Contact } from 'src/app/shared/models/Contact';
 import { AddressService } from 'src/app/services/address.service';
@@ -42,6 +42,7 @@ export class ContactComponent implements OnInit {
       this.getAllAC();
     }
 
+
   getAllAC(){
     this.activatedRoute.params.subscribe((params) => {
       if(params['id']){
@@ -50,18 +51,28 @@ export class ContactComponent implements OnInit {
       }
 
     })
+
     this.countryService.getAllCountries().subscribe(country => this.countries = country);
 
   }
 
   addForm(): void {
-    this.showForm = true;
+    this.newForm.markAsPristine();
+    this.newForm.markAsUntouched();
+    this.newForm.reset();
+    this.showForm = !this.showForm;
   }
 
   submit(): void {
+    window.location.reload();
     this.getAllAC();
+    this.addressService.getAllAddresses().subscribe(value => {
+      this.addressId = value;
+    });
     if(this.addressId){
-      this.vAddress.id = this.addressId.length + 1;
+      console.log("addressId: " + this.addressId.length);
+      this.vAddress.id = ++this.addressId.length;
+      console.log("addressId: " + this.addressId.length);
     }
     this.vAddress.contactId = this.contact.id.toString();
     if(this.newForm.valid){
@@ -71,26 +82,32 @@ export class ContactComponent implements OnInit {
       this.vAddress.country = this.newForm.value.country;
 
       this.addressService.createAddress(this.vAddress).subscribe(() => {
-        this.router.navigateByUrl(`/contacts/${this.vAddress.contactId}`)
+        // this.router.navigateByUrl(`/contacts/${this.vAddress.contactId}`)
+
       })
+
     }
 
+    this.getAllAC();
     this.addresses.map(address => {
       let id:number = address.id;
       this.addressService.updateAddress(address, id).subscribe(() => {
-        this.router.navigateByUrl(`/contacts/${address.contactId}`);
+        // this.router.navigateByUrl(`/contacts/${address.contactId}`);
       })
     })
-    window.location.reload();
+    this.addForm();
+    // window.location.reload();
+    this.newForm.markAsPristine();
+    this.newForm.markAsUntouched();
+    this.newForm.reset();
+    this.getAllAC();
 
 
   }
 
   ngOnInit(): void {
 
-    this.addressService.getAllAddresses().subscribe(value => {
-      this.addressId = value;
-    });
+
   }
 
 }

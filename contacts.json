@@ -19,7 +19,6 @@
       "avatar": "https://pbs.twimg.com/profile_images/630503477748195328/GWKlmRm-.jpg"
     },
     {
-      "avatar": "https://handmade.network/static/light/empty-avatar.svg",
       "first_name": "John",
       "last_name": "Doe",
       "id": 4
@@ -33,86 +32,6 @@
       "country": "GB",
       "contactId": "2",
       "id": 1
-    },
-    {
-      "id": 2,
-      "contactId": "2",
-      "street1": "s",
-      "street2": "s",
-      "town": "s",
-      "country": "AT"
-    },
-    {
-      "id": 3,
-      "contactId": "2",
-      "street1": "d",
-      "street2": "d",
-      "town": "d",
-      "country": "AT"
-    },
-    {
-      "id": 4,
-      "contactId": "3",
-      "street1": "aa",
-      "street2": "aaa",
-      "town": "aaa",
-      "country": "CH"
-    },
-    {
-      "id": 5,
-      "contactId": "3",
-      "street1": "asd",
-      "street2": "asd",
-      "town": "asd",
-      "country": "AT"
-    },
-    {
-      "id": 6,
-      "contactId": "3",
-      "street1": "ss",
-      "street2": "s",
-      "town": "s",
-      "country": "DE"
-    },
-    {
-      "id": 7,
-      "contactId": "3",
-      "street1": "s",
-      "street2": "s",
-      "town": "s",
-      "country": "CH"
-    },
-    {
-      "id": 8,
-      "contactId": "3",
-      "street1": "asd",
-      "street2": "asd",
-      "town": "asd",
-      "country": "DE"
-    },
-    {
-      "id": 9,
-      "contactId": "3",
-      "street1": "",
-      "street2": "s",
-      "town": "s",
-      "country": "NL"
-    },
-    {
-      "id": 10,
-      "contactId": "3",
-      "street1": "s",
-      "street2": "d",
-      "town": "d",
-      "country": "DE"
-    },
-    {
-      "id": 11,
-      "contactId": "3",
-      "street1": "asd",
-      "street2": "asd",
-      "town": "asd",
-      "country": "AT"
     }
   ],
   "countries": [
