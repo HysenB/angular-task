@@ -19,11 +19,12 @@
       <input matInput placeholder="Enter Name" [(ngModel)]="name" name="name">
     </mat-form-field>
 
+
     <!-- <input type="submit" value="Create"> -->
     <button class="button" type="submit">
       <mat-icon type="submit">add_circle</mat-icon>
     </button>
-
+    <p *ngIf="errorMessage" style="color: red;">{{errorMessage}}</p>
   </form>
 
 </div>
